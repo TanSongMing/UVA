@@ -1,5 +1,3 @@
-package oneDArrayManipulation;
-
 import java.util.Scanner;
 
 public class Question10050 {

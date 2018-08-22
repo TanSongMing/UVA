@@ -1,5 +1,3 @@
-package Medium;
-
 public class Question12478 {
 	static String[] name = {"RAKIBUL","ANINDYA","MOSHIUR","SHIPLU","KABIR","SUNNY","OBAIDA","WASI"};
 	

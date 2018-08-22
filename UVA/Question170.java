@@ -1,5 +1,3 @@
-package Time;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
