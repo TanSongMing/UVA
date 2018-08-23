@@ -20,6 +20,6 @@ public class Question11364 {
 					min=park;
 			}
 			System.out.println((max-min)*2);
-		}=
+		}
 	}
 }
