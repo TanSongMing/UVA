@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Question591 {
 
 	public static void main(String[] args) {

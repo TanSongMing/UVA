@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Question10038 {
 	public static String jolly(int[] n) {
 		int[] num = new int[3001];
