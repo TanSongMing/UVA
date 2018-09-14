@@ -7,7 +7,6 @@ public class Question626 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-		int x=0;
 		while(true) {
 			String input = bf.readLine();
 			if(input==null || input.isEmpty())
@@ -29,7 +28,6 @@ public class Question626 {
 							sb.append((i+1)).append(" ").append((j+1)).append(" ").append(k+1).append("\n");
 						}
 			sb.append("total:").append(count).append("\n").append("\n");
-			x++;
 		}
 		System.out.print(sb);
 	}
