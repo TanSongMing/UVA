@@ -6,42 +6,31 @@ public class Question10324 {
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader bf = new BufferedReader( new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		for(int i=1;;i++) {
 			String input = bf.readLine();
-			if(input.equals("")) 
+			if(input==null || input.isEmpty()) 
 				break;
 			int cases = Integer.parseInt(bf.readLine());
-			System.out.println("Case "+i+":");
+			if(cases==0)
+				break;
+			int[] dp = new int[input.length()];
+			sb.append("Case ").append(i).append(":\n");
+			dp[0] = 1;
+			for(int j=1;j<dp.length;j++) {
+				if(input.charAt(j)==input.charAt(j-1))
+					dp[j] = dp[j-1];
+				else
+					dp[j] = dp[j-1]+1;
+			}
 			for(int j=0;j<cases;j++) {
-				String number = bf.readLine();
-				StringTokenizer st = new StringTokenizer(number," ");
-				int num1 = Integer.parseInt(st.nextToken());
-				int num2 = Integer.parseInt(st.nextToken());
-				if(num1==num2) {
-					System.out.println("Yes");
-					break;
-				}
-				boolean flag=true;
-				if(num1>num2) {
-					  for (int k=num2;k<num1;k++) {  
-                          if (input.charAt(k)!=input.charAt(k+1)) {  
-                               flag = false;  
-                               break;  
-                          } 
-					  }
-				}else {
-					 for (int k=num1;k<num2;k++) {  
-                         if (input.charAt(k)!=input.charAt(k+1)) {  
-                              flag = false;  
-                              break;  
-                         } 
-					  }
-				}
-				if(flag)
-					System.out.println("Yes");
-				else 
-					System.out.println("No");
+				StringTokenizer st = new StringTokenizer(bf.readLine());
+				if(dp[Integer.parseInt(st.nextToken())]!=dp[Integer.parseInt(st.nextToken())])
+					sb.append("No\n");
+				else
+					sb.append("Yes\n");
 			}
 		}
+		System.out.print(sb);
 	}
 }
